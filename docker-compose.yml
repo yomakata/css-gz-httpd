@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+   httpd:
+      image: httpd:latest
+      ports:
+        - 80:80
+        - 443:443
+      volumes:
+        - ./html/:/usr/local/apache2/htdocs/
+        - ./conf.d/:/usr/local/apache2/conf.d/
